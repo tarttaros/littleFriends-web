@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<body>
+<div class="container col-md-6">
+  <h1>Iniciar sesion Administrador</h1>
+  <form >
+    <div class="input-group">
+      <input required type="text" id="email" required class="input" name="email" [(ngModel)] = "tokenRequest.email">
+      <label for="email" class="input-label">Correo</label>
+    </div>
+    <br>
+    <div class="input-group">
+      <input required type="password" id="password" required class="input" name="password" [(ngModel)] = "tokenRequest.password">
+      <label for="password" class="input-label">Contraseña</label>
+    </div>
+    <br>
+    <button class="btn"(click)="adminLogin()" routerLink="/">Enviar</button>
+  </form>
+</div>
+</body>

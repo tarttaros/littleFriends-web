@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<button *ngIf="gStaticUser == true && gStaticVet == true && gStaticAdmin == false" routerLink="/register-product" class="button-86">Registrar Producto</button>
+
+<mat-table [dataSource]="products" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="Nombre">
+    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{product.nameProduct}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Precio">
+    <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{product.price}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Cantidad">
+    <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{product.quantityProduct}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Descripcion">
+    <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{product.description}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
