@@ -9,12 +9,12 @@ phases:
   install:
     commands:
         - echo Installing source NPM dependencies...
+        - cd littleFriends
         - npm install
         - npm install -g @angular/cli
   build:
     commands:
         - echo Build started
-        - cd littleFriends
         - ng build
 artifacts:
     files:
