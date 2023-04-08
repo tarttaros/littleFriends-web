@@ -10,7 +10,6 @@ phases:
     commands:
         - echo Installing source NPM dependencies...
         - cd littleFriends
-        - npm init
         - npm install
         - npm install -g @angular/cli
   build:
