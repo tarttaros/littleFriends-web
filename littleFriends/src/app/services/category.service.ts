@@ -11,7 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   showCategories(){
-    this.http.get('http://18.212.241.9:9090/category').subscribe((res: any) => {
+    this.http.get('http://localhost:9090/category').subscribe((res: any) => {
       res.forEach((element: Category)  => {
         CategoryService.categories.push(element.description);
       });

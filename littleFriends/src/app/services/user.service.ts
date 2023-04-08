@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   showUsers(){
-    this.http.get('http://18.212.241.9:9090/user').subscribe((res: any) => {
+    this.http.get('http://localhost:9090/user').subscribe((res: any) => {
       res.forEach((element: User)  => {
         console.log(element);
         UserService.users.push(element);

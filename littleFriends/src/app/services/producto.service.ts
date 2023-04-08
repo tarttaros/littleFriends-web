@@ -11,7 +11,7 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   showProducts(){
-    this.http.get('http://18.212.241.9:9090/product').subscribe((res: any) => {
+    this.http.get('http://localhost:9090/product').subscribe((res: any) => {
       res.forEach((element: Product)  => {
         ProductoService.products.push(element);
       });
