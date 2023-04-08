@@ -7,8 +7,6 @@ env:
         BUILD_FOLDER: "dist"
 phases:
   install:
-    runtime-versions:
-        java: 11
     commands:
         - echo Installing source NPM dependencies...
         - npm install
