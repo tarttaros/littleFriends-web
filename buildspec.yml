@@ -4,7 +4,7 @@ env:
     variables:
         CACHE_CONTROL: "86400"
         S3_BUCKET: "{{s3_bucket_url}}"
-        BUILD_FOLDER: "littleFriends/dist"
+        BUILD_FOLDER: "dist"
 phases:
   install:
     commands:
@@ -20,5 +20,5 @@ phases:
 artifacts:
     files:
         - 'littleFriends/**/*'
-    #base-directory: 'dist*'
+    base-directory: 'littleFriends/dist*'
     discard-paths: yes
