@@ -14,7 +14,12 @@ phases:
     commands:
         - echo Build started
         - ls
-        - ng build
+        - ng build --prod
+post_build:
+    commands:
+      - aws s3 cp ./littlefriends/dist/little-friends s3://elasticbeanstalk-us-east-2-372011782528 --recursive
+      - aws elasticbeanstalk create-application-version --application-name proyecto-software --version-label 1.04 --source-bundle S3Bucket="elasticbeanstalk-us-east-2-372011782528"
+
 artifacts:
     files:
         - '**/*'
