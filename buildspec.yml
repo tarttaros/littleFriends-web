@@ -14,7 +14,7 @@ phases:
     commands:
         - echo Build started
         - ls
-        - ng build --prod
+        - ng build
 post_build:
     commands:
       - aws s3 cp ./littlefriends/dist/little-friends s3://elasticbeanstalk-us-east-2-372011782528 --recursive
