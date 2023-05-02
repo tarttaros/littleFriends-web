@@ -19,6 +19,6 @@ phases:
         - ng build
 artifacts:
     files:
-        - '**/*'
-    base-directory: 'littleFriends/*'
+        - '*'
+    base-directory: 'littleFriends/dist*'
     discard-paths: yes
