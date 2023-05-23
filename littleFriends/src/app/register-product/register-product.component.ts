@@ -16,6 +16,7 @@ export class RegisterProductComponent implements OnInit {
   constructor(private registerService: RegisterService, private categoryService : CategoryService) { }
 
   ngOnInit(): void {
+     // This is intentional
   }
 
   productRegister()

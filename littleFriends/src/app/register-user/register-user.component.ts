@@ -14,7 +14,9 @@ export class RegisterUserComponent implements OnInit
   user : User = new User();
   constructor(private registerService: RegisterService) {}
 
-  ngOnInit(): void{}
+  ngOnInit(): void{
+     // This is intentional
+  }
 
   userRegister()
   {

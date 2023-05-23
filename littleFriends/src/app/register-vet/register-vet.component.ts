@@ -13,6 +13,7 @@ export class RegisterVetComponent implements OnInit {
   constructor(private registerService: RegisterService) { }
 
   ngOnInit(): void {
+     // This is intentional
   }
 
   vetRegister()

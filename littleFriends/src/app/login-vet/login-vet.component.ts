@@ -13,6 +13,7 @@ export class LoginVetComponent implements OnInit {
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+     // This is intentional
   }
 
   vetLogin(){

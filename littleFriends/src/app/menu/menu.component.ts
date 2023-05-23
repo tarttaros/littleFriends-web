@@ -8,9 +8,12 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+     // This is intentional
+  }
 
   ngOnInit(): void {
+     // This is intentional
   }
 
   static user1: Boolean = true;
