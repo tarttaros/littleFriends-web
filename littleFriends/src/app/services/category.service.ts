@@ -16,9 +16,4 @@ export class CategoryService {
         CategoryService.categories.push(element.description);
       });
     })}
-
-/*
-    res.forEach((element: Category) => {
-      this.category.push(element.description);
-    });*/
 }

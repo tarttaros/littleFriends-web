@@ -1,13 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: top;
-  justify-content: top;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
 .input-group{
   position: relative;
 }

@@ -43,10 +43,7 @@ export class LoginService {
     ProductComponent.hideDataUser();
     localStorage.setItem('id_token_user', authResult1.token);
     localStorage.setItem("expires_at_user", JSON.stringify(expiresAt.valueOf()));
-    /*
-    console.log("Token expires at " + expiresAt);
-    console.log("Token date and time is " + this.dateService.getShortDateAndTimeDisplay(expiresAt));
-    */
+
   }
   private setSession2 (authResult2: TokenResponse) {
     const expiresAt = authResult2.expirationDate;
@@ -56,10 +53,7 @@ export class LoginService {
     UserComponent.hideDataAdmin();
     localStorage.setItem('id_token_admin', authResult2.token);
     localStorage.setItem("expires_at_admin", JSON.stringify(expiresAt.valueOf()));
-    /*
-    console.log("Token expires at " + expiresAt);
-    console.log("Token date and time is " + this.dateService.getShortDateAndTimeDisplay(expiresAt));
-    */
+
   }
   private setSession3 (authResult3: TokenResponse) {
     const expiresAt = authResult3.expirationDate;
@@ -69,9 +63,6 @@ export class LoginService {
     ProductComponent.hideDataVet();
     localStorage.setItem('id_token_vet', authResult3.token);
     localStorage.setItem("expires_at_vet", JSON.stringify(expiresAt.valueOf()));
-    /*
-    console.log("Token expires at " + expiresAt);
-    console.log("Token date and time is " + this.dateService.getShortDateAndTimeDisplay(expiresAt));
-    */
+
   }
 }
