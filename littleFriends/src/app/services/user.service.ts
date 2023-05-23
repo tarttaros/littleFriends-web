@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   showUsers(){
-    this.http.get('http://proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/user').subscribe((res: any) => {
+    this.http.get('http://Backend-sftw3-env.eba-qmi3ideu.us-east-2.elasticbeanstalk.com:9090/user').subscribe((res: any) => {
       res.forEach((element: User)  => {
         console.log(element);
         UserService.users.push(element);
