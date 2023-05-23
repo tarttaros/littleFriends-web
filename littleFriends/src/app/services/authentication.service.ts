@@ -8,7 +8,9 @@ import { UserComponent } from '../user/user.component';
 })
 export class AuthenticationService {
 
-  constructor () { }
+  constructor () {
+     // This is intentional
+  }
 
   static logout() {
     MenuComponent.showDataUser();

@@ -6,7 +6,9 @@ const pipe = new DatePipe('en-US');
 @Injectable({ providedIn: 'root' })
 export class DateService {
 
-    constructor() { }
+    constructor() {
+       // This is intentional
+    }
 
     getShortDateDisplay(dateValue: number): string {
         let myFormattedDate = pipe.transform(dateValue, 'shortDate') as string;
