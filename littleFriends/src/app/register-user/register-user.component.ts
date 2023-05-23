@@ -2,8 +2,7 @@ import { Component,OnInit } from "@angular/core";
 import { RegisterService } from "../services/register.service";
 import { User } from "../class/user";
 
-@Component
-({
+@Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
   styleUrls: ['./register-user.component.css']
