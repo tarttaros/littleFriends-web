@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
       this.users = UserService.users;
       UserService.users = [];
   }
-  static user: Boolean = true;
+  static user: boolean = true;
 
   static showDataUser() {
       this.user = true;
