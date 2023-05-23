@@ -29,7 +29,7 @@ export class UserComponent implements OnInit {
       this.user = false;
   }
 
-  static vet: Boolean = true;
+  static vet: boolean = true;
 
   static showDataVet() {
       this.vet = true;
@@ -39,7 +39,7 @@ export class UserComponent implements OnInit {
       this.vet = false;
   }
 
-  static admin: Boolean = true;
+  static admin: boolean = true;
 
   static showDataAdmin() {
       this.admin = true;

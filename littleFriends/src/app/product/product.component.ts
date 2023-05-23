@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
       ProductoService.products = [];
   }
 
-  static user: Boolean = true;
+  static user: boolean = true;
 
   static showDataUser() {
       this.user = true;
@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
       this.user = false;
   }
 
-  static vet: Boolean = true;
+  static vet: boolean = true;
 
   static showDataVet() {
       this.vet = true;
@@ -40,7 +40,7 @@ export class ProductComponent implements OnInit {
       this.vet = false;
   }
 
-  static admin: Boolean = true;
+  static admin: boolean = true;
 
   static showDataAdmin() {
       this.admin = true;

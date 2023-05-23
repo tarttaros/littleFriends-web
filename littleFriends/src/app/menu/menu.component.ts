@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
      // This is intentional
   }
 
-  static user1: Boolean = true;
+  static user1: boolean = true;
 
   static showDataUser() {
       this.user1 = true;
@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
       this.user1 = false;
   }
 
-  static vet: Boolean = true;
+  static vet: boolean = true;
 
   static showDataVet() {
       this.vet = true;
@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
       this.vet = false;
   }
 
-  static admin: Boolean = true;
+  static admin: boolean = true;
 
   static showDataAdmin() {
       this.admin = true;
