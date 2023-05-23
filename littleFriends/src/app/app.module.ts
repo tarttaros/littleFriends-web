@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductComponent } from './product/product.component';
-import { FooterComponent } from './footer/footer.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginVetComponent } from './login-vet/login-vet.component';
 import { RegisterVetComponent } from './register-vet/register-vet.component';
@@ -30,7 +29,6 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     LoginComponent,
     MenuComponent,
-    FooterComponent,
     LoginAdminComponent,
     LoginVetComponent,
     RegisterVetComponent,
