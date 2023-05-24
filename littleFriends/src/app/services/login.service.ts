@@ -19,7 +19,7 @@ export class LoginService {
 
   login (email: string, password: string): Observable<TokenResponse> {
     let tokenRequest: TokenRequest = { email: email, password: password };
-    return this.http.post<TokenResponse>('http://Backend-sftw3-env.eba-qmi3ideu.us-east-2.elasticbeanstalk.com:9090/login',tokenRequest).pipe(
+    return this.http.post<TokenResponse>('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/login',tokenRequest).pipe(
             tap((resp: TokenResponse) => this.setSession1(resp)),shareReplay());
   }
 

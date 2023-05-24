@@ -11,7 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   showCategories(){
-    this.http.get('http://Backend-sftw3-env.eba-qmi3ideu.us-east-2.elasticbeanstalk.com:9090/category').subscribe((res: any) => {
+    this.http.get('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/category').subscribe((res: any) => {
       res.forEach((element: Category)  => {
         CategoryService.categories.push(element.description);
       });
