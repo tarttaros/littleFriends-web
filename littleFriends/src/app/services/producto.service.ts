@@ -11,7 +11,7 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   showProducts(){
-    this.http.get('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/product').subscribe((res: any) => {
+    this.http.get('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/product').subscribe((res: any) => {
       res.forEach((element: Product)  => {
         ProductoService.products.push(element);
       });

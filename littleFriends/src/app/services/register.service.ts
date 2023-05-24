@@ -14,16 +14,16 @@ export class RegisterService
 
   registerUser(user:User) : Observable<Object>
   {
-    return this.httpClient.post('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/user',user);
+    return this.httpClient.post('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/user',user);
   }
 
   registerVet(vet:Veterinary) : Observable<Object>
   {
-    return this.httpClient.post('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/vet',vet);
+    return this.httpClient.post('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/vet',vet);
   }
 
   registerProduct(product:Product) : Observable<Object>
   {
-    return this.httpClient.post('http://Proyecto-software-3-env.eba-eqmzk2p2.us-east-2.elasticbeanstalk.com:9090/product',product);
+    return this.httpClient.post('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/product',product);
   }
 }
