@@ -28,6 +28,6 @@ export class UserService {
 
 */
     showUsers(){
-      return this.http.get<User[]>('http://localhost:9090/user')
+      return this.http.get<User[]>('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/user')
     }
 }

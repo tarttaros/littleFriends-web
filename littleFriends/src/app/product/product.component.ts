@@ -33,7 +33,13 @@ export class ProductComponent implements OnInit {
           ProductComponent.admin = false;
         }
     }
-
+/*
+    delete(product:Product){
+      this.productService.deleteProduct(product.nameProduct).subscribe(
+        res=>this.productService.showProducts().subscribe(
+          data=>this.products=data))
+    }
+*/
 
   static admin: boolean;
   static user: boolean;

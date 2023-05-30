@@ -17,15 +17,15 @@ export class ProductoService {
       });
     })}
 
-        showProducts(){
-      this.http.get('http://localhost:9090/product').subscribe((res: any) => {
-        res.forEach((element: Product)  => {
-          ProductoService.products.push(element);
-        });
-      })}
+  deleteProduct(productName:String){
+  return this.http.delete('http://localhost:9090/product'+'/${productName}')
+  console.log('${productName}');
+}
 */
 showProducts(){
-  return this.http.get<Product[]>('http://localhost:9090/product')
+  return this.http.get<Product[]>('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/product')
 }
+
+
 
 }
