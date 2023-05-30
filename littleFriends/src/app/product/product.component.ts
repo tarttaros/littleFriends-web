@@ -13,25 +13,25 @@ export class ProductComponent implements OnInit {
   constructor(private productService: ProductoService) { }
 
     ngOnInit(): void {
+      if(localStorage.getItem("persona") == "admin"){
+        ProductComponent.admin = true;
+      }
+      else if(localStorage.getItem("persona") == "vet"){
+        ProductComponent.vet = true;
+      }
+      else if(localStorage.getItem("persona") == "user"){
+        ProductComponent.user = true;
+      }
+      else{
+        ProductComponent.user = false;
+        ProductComponent.vet = false;
+        ProductComponent.admin = false;
+      }
+
       this.productService.showProducts()
       .subscribe(data=>
         {this.products=data;
         })
-
-        if(localStorage.getItem("persona") == "admin"){
-          ProductComponent.admin = true;
-        }
-        else if(localStorage.getItem("persona") == "vet"){
-          ProductComponent.vet = true;
-        }
-        else if(localStorage.getItem("persona") == "user"){
-          ProductComponent.user = true;
-        }
-        else{
-          ProductComponent.user = false;
-          ProductComponent.vet = false;
-          ProductComponent.admin = false;
-        }
     }
 /*
     delete(product:Product){
