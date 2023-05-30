@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   userLogin(){
-    this.loginService.login(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{""},error=>alert("Error al iniciar sesion"))
+    this.loginService.login(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{alert("Bienvenido usuario")},error=>alert("Error al iniciar sesion"))
   }
 
 }

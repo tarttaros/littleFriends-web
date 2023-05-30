@@ -17,6 +17,6 @@ export class LoginAdminComponent implements OnInit {
   }
 
   adminLogin(){
-    this.loginService.loginAdmin(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{""},error=>alert("Error al iniciar sesion"))
+    this.loginService.loginAdmin(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{alert("Bienvenido administrador")},error=>alert("Error al iniciar sesion"));
   }
 }

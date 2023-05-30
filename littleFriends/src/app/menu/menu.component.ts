@@ -8,46 +8,34 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class MenuComponent implements OnInit {
 
+  static admin: boolean;
+  static user: boolean;
+  static vet: boolean;
+
   constructor() {
      // This is intentional
   }
 
   ngOnInit(): void {
-     // This is intentional
-  }
+    if(localStorage.getItem("persona") == "admin"){
+      MenuComponent.admin = true;
+    }
+    else if(localStorage.getItem("persona") == "vet"){
+      MenuComponent.vet = true;
+    }
+    else if(localStorage.getItem("persona") == "user"){
+      MenuComponent.user = true;
+    }
+    else{
+      MenuComponent.user = false;
+      MenuComponent.vet = false;
+      MenuComponent.admin = false;
+    }
 
-  static user1: boolean = true;
-
-  static showDataUser() {
-      this.user1 = true;
-  }
-
-  static hideDataUser() {
-      this.user1 = false;
-  }
-
-  static vet: boolean = true;
-
-  static showDataVet() {
-      this.vet = true;
-  }
-
-  static hideDataVet() {
-      this.vet = false;
-  }
-
-  static admin: boolean = true;
-
-  static showDataAdmin() {
-      this.admin = true;
-  }
-
-  static hideDataAdmin() {
-      this.admin = false;
   }
 
   get gStaticUser(){
-    return MenuComponent.user1;
+    return MenuComponent.user;
   }
 
   get gStaticVet(){

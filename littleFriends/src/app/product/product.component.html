@@ -1,28 +1,32 @@
+<div class="bg-img-principal">
 <app-menu></app-menu>
-<button *ngIf="gStaticUser == true && gStaticVet == true && gStaticAdmin == false" routerLink="/register-product" class="button-86">Registrar Producto</button>
+<button *ngIf="gStaticVet == true || gStaticAdmin == true" routerLink="/register-product" class="button-86">Registrar Producto</button>
 
-<mat-table [dataSource]="products" class="mat-elevation-z8">
+<div class="container bg-light">
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr class="text-center">
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" class="text-center">
+          <td>{{product.nameProduct}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantityProduct}}</td>
+          <td>
+            <button *ngIf="gStaticVet == true || gStaticAdmin == true" class="btn">Editar</button>
+            <button *ngIf="gStaticVet == true || gStaticAdmin == true" class="btn" style="margin-left: 10px;">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-  <ng-container matColumnDef="Nombre">
-    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
-    <mat-cell *matCellDef="let product"> {{product.nameProduct}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Precio">
-    <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
-    <mat-cell *matCellDef="let product"> {{product.price}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Cantidad">
-    <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
-    <mat-cell *matCellDef="let product"> {{product.quantityProduct}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Descripcion">
-    <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
-    <mat-cell *matCellDef="let product"> {{product.description}} </mat-cell>
-  </ng-container>
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+</div>

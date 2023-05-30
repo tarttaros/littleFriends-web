@@ -12,38 +12,27 @@ export class VetsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-     // This is intentional
+    if(localStorage.getItem("persona") == "admin"){
+      VetsComponent.admin = true;
+    }
+    else if(localStorage.getItem("persona") == "vet"){
+      VetsComponent.vet = true;
+    }
+    else if(localStorage.getItem("persona") == "user"){
+      VetsComponent.user = true;
+    }
+    else{
+      VetsComponent.user = false;
+      VetsComponent.vet = false;
+      VetsComponent.admin = false;
+    }
   }
 
-  static user: boolean = true;
+  static user: boolean;
 
-  static showDataUser() {
-      this.user = true;
-  }
+  static vet: boolean;
 
-  static hideDataUser() {
-      this.user = false;
-  }
-
-  static vet: boolean = true;
-
-  static showDataVet() {
-      this.vet = true;
-  }
-
-  static hideDataVet() {
-      this.vet = false;
-  }
-
-  static admin: boolean = true;
-
-  static showDataAdmin() {
-      this.admin = true;
-  }
-
-  static hideDataAdmin() {
-      this.admin = false;
-  }
+  static admin: boolean;
 
   get gStaticUser(){
     return VetsComponent.user;

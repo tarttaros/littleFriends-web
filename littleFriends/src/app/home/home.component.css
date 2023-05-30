@@ -52,8 +52,8 @@
 }
 
 .button-86 {
+  width: 100%;
   all: unset;
-  width: 100px;
   height: 30px;
   font-size: 16px;
   background: transparent;
@@ -116,4 +116,49 @@
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+
+body {
+	font-family: 'Underdog', cursive;
+	margin: 0;
+}
+
+.bg-color-info {
+	background-color: rgb(244, 246, 251);
+}
+
+.font-color-general {
+	color:#8b79e6;
+}
+
+.brand-name {
+	font-size: 1.8rem;
+	color: rgb(67, 105, 176);
+	margin-left: 2rem;
+}
+
+.bg-img-principal {
+	background-image: url("https://media.istockphoto.com/id/1085030172/es/foto/veterinario-hembra-con-un-perro.jpg?s=1024x1024&w=is&k=20&c=cQ_5lo54rfZfjGvs1Nq6B3y7GhP2nY_4j6GfY5JEMxk=");
+	background-size: cover;
+	height: 650px;
+	background-position: center center;
+}
+
+.bloque-texto-principal {
+	margin-top:10px;
+}
+
+.bg-color-rosa {
+	background-color: rgb(175, 143, 255);
+}
+
+.hrblanco {
+	width: 10%;
+	background-color: white;
+}
+
+.hrazul {
+	width: 10%;
+	background-color: rgb(244, 246, 251);
 }

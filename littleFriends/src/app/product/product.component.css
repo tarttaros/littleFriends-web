@@ -1,10 +1,11 @@
 .button-86 {
+  margin: 5%;
   all: unset;
   width: 100px;
   height: 30px;
   font-size: 16px;
   background: transparent;
-  border: none;
+  border: 10px;
   position: relative;
   color: #f0f0f0;
   cursor: pointer;
@@ -71,4 +72,27 @@
 
 table {
   width: 100%;
+}
+.card {
+  margin:20px 5px 20px 5px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 25%;
+  background: rgb(175, 143, 255);
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+
+.bg-img-principal {
+	background-image: url("https://media.istockphoto.com/id/1085030172/es/foto/veterinario-hembra-con-un-perro.jpg?s=1024x1024&w=is&k=20&c=cQ_5lo54rfZfjGvs1Nq6B3y7GhP2nY_4j6GfY5JEMxk=");
+	background-size: cover;
+	height: 650px;
+	background-position: center center;
 }

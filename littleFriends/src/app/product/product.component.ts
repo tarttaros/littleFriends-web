@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../class/product';
 import { ProductoService } from '../services/producto.service';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-product',
@@ -9,46 +10,38 @@ import { ProductoService } from '../services/producto.service';
 })
 export class ProductComponent implements OnInit {
 
-  products !: Product[];
-  product : Product = new Product();
-  displayedColumns: string[] = ['Nombre', 'Precio', 'Cantidad', 'Descripcion'];
   constructor(private productService: ProductoService) { }
 
     ngOnInit(): void {
-      this.productService.showProducts();
-      this.products = ProductoService.products;
-      ProductoService.products = [];
-  }
+      this.productService.showProducts()
+      .subscribe(data=>
+        {this.products=data;
+        })
 
-  static user: boolean = true;
+        if(localStorage.getItem("persona") == "admin"){
+          ProductComponent.admin = true;
+        }
+        else if(localStorage.getItem("persona") == "vet"){
+          ProductComponent.vet = true;
+        }
+        else if(localStorage.getItem("persona") == "user"){
+          ProductComponent.user = true;
+        }
+        else{
+          ProductComponent.user = false;
+          ProductComponent.vet = false;
+          ProductComponent.admin = false;
+        }
+    }
 
-  static showDataUser() {
-      this.user = true;
-  }
 
-  static hideDataUser() {
-      this.user = false;
-  }
+  static admin: boolean;
+  static user: boolean;
+  static vet: boolean;
 
-  static vet: boolean = true;
 
-  static showDataVet() {
-      this.vet = true;
-  }
-
-  static hideDataVet() {
-      this.vet = false;
-  }
-
-  static admin: boolean = true;
-
-  static showDataAdmin() {
-      this.admin = true;
-  }
-
-  static hideDataAdmin() {
-      this.admin = false;
-  }
+  products !: Product[];
+  product : Product = new Product();
 
   get gStaticUser(){
     return ProductComponent.user;

@@ -17,7 +17,7 @@ export class LoginVetComponent implements OnInit {
   }
 
   vetLogin(){
-    this.loginService.loginVet(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{""},error=>alert("Error al iniciar sesion"))
+    this.loginService.loginVet(this.tokenRequest.email,this.tokenRequest.password).subscribe(data=>{alert("Bienvenido veterinario")},error=>alert("Error al iniciar sesion"))
   }
 }
 

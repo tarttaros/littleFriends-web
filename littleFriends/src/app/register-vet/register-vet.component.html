@@ -2,7 +2,7 @@
 <body>
 <div class="container col-md-6">
   <h1 class="primary">Registro veterinario</h1>
-  <form (ngSubmit)="vetRegister()">
+  <form>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nombre</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)] = "vet.name">
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary"> Confirmar</button>
+    <button type="submit" class="btn btn-primary" (click)="vetRegister()" routerLink="/menu"> Confirmar</button>
   </form>
 </div>
 </body>

@@ -11,7 +11,7 @@ import { Veterinary } from '../class/veterinary';
 export class RegisterService
 {
   constructor(private httpClient: HttpClient) { }
-
+/*
   registerUser(user:User) : Observable<Object>
   {
     return this.httpClient.post('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/user',user);
@@ -25,5 +25,20 @@ export class RegisterService
   registerProduct(product:Product) : Observable<Object>
   {
     return this.httpClient.post('http://Proyecto-env.eba-apnhh2qc.us-east-2.elasticbeanstalk.com:9090/product',product);
+  }
+*/
+  registerUser(user:User) : Observable<Object>
+  {
+    return this.httpClient.post('http://localhost:9090/user',user);
+  }
+
+  registerVet(vet:Veterinary) : Observable<Object>
+  {
+    return this.httpClient.post('http://localhost:9090/vet',vet);
+  }
+
+  registerProduct(product:Product) : Observable<Object>
+  {
+    return this.httpClient.post('http://localhost:9090/product',product);
   }
 }

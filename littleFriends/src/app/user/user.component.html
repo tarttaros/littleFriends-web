@@ -1,28 +1,30 @@
+
+<div class="bg-img-principal">
 <app-menu></app-menu>
+<div class="container bg-light">
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr class="text-center">
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Id</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" class="text-center">
+          <td>{{user.name}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td>{{user.identification}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            <button *ngIf="gStaticAdmin == true" class="btn" style="margin-left: 10px;">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<mat-table [dataSource]="users" class="mat-elevation-z8">
-
-  <ng-container matColumnDef="Nombre">
-    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
-    <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Telefono">
-    <mat-header-cell *matHeaderCellDef> Telefono </mat-header-cell>
-    <mat-cell *matCellDef="let user"> {{user.phoneNumber}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Id">
-    <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
-    <mat-cell *matCellDef="let user"> {{user.identification}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Email">
-    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
-    <mat-cell *matCellDef="let user"> {{user.email}} </mat-cell>
-  </ng-container>
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
-
+</div>

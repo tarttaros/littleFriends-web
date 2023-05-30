@@ -4,7 +4,6 @@ export class Product {
   quantityProduct !: number;
   price !: number;
 
-
   public get getNameProduct() : string {
     return this.nameProduct;
   }

@@ -2,7 +2,7 @@
 <body>
 <div class="container col-md-6">
   <h1 class="primary">Registro usuario</h1>
-  <form (ngSubmit)="userRegister()">
+  <form>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nombre</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)] = "user.name">
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary"> Confirmar</button>
+    <button type="submit" class="btn btn-primary" (click)="userRegister()" routerLink="/menu"> Confirmar</button>
   </form>
 </div>
 </body>

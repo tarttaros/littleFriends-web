@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../class/user';
 import { UserService } from '../services/user.service';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-user',
@@ -15,39 +16,30 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService) { }
 
     ngOnInit(): void {
-      this.userService.showUsers();
-      this.users = UserService.users;
-      UserService.users = [];
+      this.userService.showUsers().subscribe(data=>
+        {this.users=data;
+        })
+
+      if(localStorage.getItem("persona") == "admin"){
+        UserComponent.admin = true;
+      }
+      else if(localStorage.getItem("persona") == "vet"){
+        UserComponent.vet = true;
+      }
+      else if(localStorage.getItem("persona") == "user"){
+        UserComponent.user = true;
+      }
+      else{
+        UserComponent.user = false;
+        UserComponent.vet = false;
+        UserComponent.admin = false;
+      }
   }
-  static user: boolean = true;
+  static user: boolean;
 
-  static showDataUser() {
-      this.user = true;
-  }
+  static vet: boolean;
 
-  static hideDataUser() {
-      this.user = false;
-  }
-
-  static vet: boolean = true;
-
-  static showDataVet() {
-      this.vet = true;
-  }
-
-  static hideDataVet() {
-      this.vet = false;
-  }
-
-  static admin: boolean = true;
-
-  static showDataAdmin() {
-      this.admin = true;
-  }
-
-  static hideDataAdmin() {
-      this.admin = false;
-  }
+  static admin: boolean;
 
   get gStaticUser(){
     return UserComponent.user;
